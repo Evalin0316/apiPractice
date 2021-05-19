@@ -27,10 +27,13 @@ function login(e){
             const { token, expired } = res.data;
             console.log(token,expired);
             document.cookie = `hexToken=${token};expires=${new Date(expired)}; path=/`;
-            window.location.reload();
+            window.location('product.html');
+        }else{
+            alert(res.data.message);
+            // window.location.reload();
         }
     }).catch(()=>{
-        console.log('error');
+       console.log(err);
     });
 }
 
