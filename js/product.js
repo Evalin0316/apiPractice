@@ -34,6 +34,7 @@ const app ={
             btn.addEventListener('click',this.deleteProduct.bind(this));
         })
     },
+    
     deleteProduct(e){
         const id = e.target.dataset.id;
         console.log(this);
@@ -47,6 +48,8 @@ const app ={
         });
     },
     init(){
+
+        //Cookie 取出
         const token = document.cookie.replace(/(?:(?:^|.*;\s*)hexToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
         axios.defaults.headers.common['Authorization'] = token;
 

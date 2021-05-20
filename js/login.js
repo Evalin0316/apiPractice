@@ -22,6 +22,7 @@ function login(e){
             // const expired =  res.data.expired;
             const { token, expired } = res.data;
             console.log(token,expired);
+            //token 存在cookie
             document.cookie = `hexToken=${token};expires=${new Date(expired)}; path=/`;
             window.location='https://evalin0316.github.io/apiPractice/product.html';
         }else{
