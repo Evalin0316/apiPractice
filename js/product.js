@@ -34,7 +34,7 @@ const app ={
             btn.addEventListener('click',this.deleteProduct.bind(this));
         })
     },
-    
+
     deleteProduct(e){
         const id = e.target.dataset.id;
         console.log(this);
@@ -47,6 +47,8 @@ const app ={
         }
         });
     },
+
+    //初始化
     init(){
 
         //Cookie 取出
